@@ -13,11 +13,13 @@ namespace Deliverable1
 
                 // Ask the user to input a measurement type
                 Console.WriteLine("Let's measure the length of your computer monitor. Do you want to measure in inches or feet?");
-                string userUnit = Console.ReadLine();
+                string userUnit = Console.ReadLine().ToLower();
+                Console.WriteLine();
 
                 // Ask the user for an amount and convert result to a double
                 Console.WriteLine("How many " + userUnit + " is your computer monitor?");
                 double monitorLength = double.Parse(Console.ReadLine());
+                Console.WriteLine();
 
                 /*Convert unit measurements
                 1 inch 3.5 fidget spinners
@@ -29,19 +31,19 @@ namespace Deliverable1
 
                 if (userUnit == "inches")
                 {
-                    Console.WriteLine("Your monitor is " + fidgetSpinner + " fidget spinners long!");
+                    Console.WriteLine("Your monitor is " + fidgetSpinner + " fidget spinners long!\n");
                 }
                 else if (userUnit == "feet")
                 {
-                    Console.WriteLine("Your monitor is " + meme + " memes long!");
+                    Console.WriteLine("Your monitor is " + meme + " memes long!\n");
                 }
 
                 // Loop time...
                 Console.WriteLine("Do you want to go again? Yes or No answer, please");
-                userChoice = Console.ReadLine();
-
+                userChoice = Console.ReadLine().ToLower();
+                Console.WriteLine();
             }
-            while (userChoice == "Yes");
+            while (userChoice == "yes");
 
 
         }
